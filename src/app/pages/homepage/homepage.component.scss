@@ -1,0 +1,20 @@
+.remove-padding {
+  padding: 0;
+}
+
+.designer-header {
+  background: #FFF url('../../../assets/Banner.png') no-repeat;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+
+  .slogan,
+  .title {
+    color: #FFF;
+  }
+
+  .title {
+    // margin-top: 150px;
+  }
+}

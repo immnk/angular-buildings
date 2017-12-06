@@ -1,0 +1,20 @@
+.remove-padding {
+  padding: 0;
+}
+
+.breadcrumbs {
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  a {
+    color: #9E9E9E;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: #FF5722;
+    }
+  }
+}

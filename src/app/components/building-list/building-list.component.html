@@ -1,0 +1,6 @@
+<div class="list-wrapper">
+  <div class="container" *ngIf="buildings$ | async as buildings else noData">
+    <app-building *ngFor="let building of buildings" [building]="building"></app-building>
+  </div>
+  <ng-template #noData>No Data Available</ng-template>
+</div>

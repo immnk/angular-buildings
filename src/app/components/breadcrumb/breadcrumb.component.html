@@ -1,0 +1,10 @@
+<div class="container-fluid remove-padding">
+  <div class="breadcrumbs">
+    <div class="container">
+      <span *ngFor="let breadcrumb of breadcrumbs; let i = index;">
+        <a [routerLink]="breadcrumb.path" routerLinkActive="active">{{ breadcrumb.title }}</a>
+        {{ (this.breadcrumbs.length == (i + 1))? "" : " / " }}
+      </span>
+    </div>
+  </div>
+</div>

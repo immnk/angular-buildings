@@ -1,0 +1,12 @@
+<section class="building-wrapper">
+  <img [src]="building.buildingImage" class="poster" />
+  <div class="building-details padding">
+    <h3>{{ building.name }}</h3>
+    <p class="gray">{{ building.type }}</p>
+    <section class="bottom">
+      <div>{{ building.address }}</div>
+      <div>{{ building.city }}</div>
+      <div class="red">{{ building.cost }}</div>
+    </section>
+  </div>
+</section>

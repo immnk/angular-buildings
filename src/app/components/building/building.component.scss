@@ -1,0 +1,31 @@
+.building-wrapper {
+  display: flex;
+  align-items: flex-start;
+  background: #FFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 24px 0;
+
+  .poster {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .building-details {
+    position: relative;
+    height: 300px;
+
+    .bottom {
+      position: absolute;
+      bottom: 24px;
+
+      .red {
+        color: #FF5722;
+      }
+    }
+  }
+
+  .padding {
+    padding: 20px;
+  }
+}
