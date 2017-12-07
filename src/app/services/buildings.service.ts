@@ -9,17 +9,32 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class BuildingsService {
 
+  private buildings: IBuilding[];
   private API_ENDPOINT = "https://api.myjson.com/bins/165bz3";
   // private API_ENDPOINT = "https://api.myjson.com/bins/mjs4d";
 
-  constructor(private http: HttpClient) { }
+  getBuildings(): IBuilding[] {
+    return this.buildings;
+  }
+
+  setBuildings(buildings: IBuilding[]) {
+    this.buildings = buildings;
+  }
+
+  constructor(private http: HttpClient) {
+    this.buildings = [];
+  }
 
   getAllBuildings(): Observable<IBuilding[]> {
     return this.http.get<IBuilding[]>(this.API_ENDPOINT)
       .pipe(
-      tap(buildings => this.log(`fetched buildings`)),
+      tap(buildings => { this.log(`fetched buildings`); this.setBuildings(buildings); }),
       catchError(this.handleError('getAllBuildings', []))
       );
+  }
+
+  getBuildingByName(name: string): IBuilding {
+    return this.buildings.find(x => x.name == name);
   }
 
   /**

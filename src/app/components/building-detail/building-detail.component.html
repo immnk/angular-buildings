@@ -1,4 +1,4 @@
-<a [routerLink]="['/buildings', building.name ]" class="building-wrapper">
+<section class="building-wrapper" *ngIf="building else noData">
   <img [src]="building.buildingImage" class="poster" />
   <div class="building-details padding">
     <h3>{{ building.name }}</h3>
@@ -6,7 +6,8 @@
     <section class="bottom">
       <div>{{ building.address }}</div>
       <div>{{ building.city }}</div>
-      <div class="red padding-top">{{ building.cost }}</div>
+      <div class="red">{{ building.cost }}</div>
     </section>
   </div>
-</a>
+</section>
+<ng-template #noData>No Data Available</ng-template>

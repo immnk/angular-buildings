@@ -14,7 +14,6 @@
   .building-details {
     position: relative;
     height: 300px;
-    color: #111;
 
     .bottom {
       position: absolute;
@@ -28,12 +27,5 @@
 
   .padding {
     padding: 20px;
-  }
-  .padding-top {
-    padding-top: 12px;
-  }
-
-  &:hover {
-    text-decoration: none;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IBuilding } from '../../models/building-model';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-building',
@@ -10,9 +10,13 @@ import { IBuilding } from '../../models/building-model';
 export class BuildingComponent implements OnInit {
   @Input() building: IBuilding;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  navigate() {
+    // this.router.navigate(['/building', this.building.name]);
   }
 
 }
